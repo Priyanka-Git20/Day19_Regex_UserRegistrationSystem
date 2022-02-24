@@ -53,14 +53,19 @@ public class UserOperator {
         }
     }
 
-
-
-
-
-
-
-
-
-
-
+    public void mobileNumber(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the mobile number");
+        String mobileNumber = sc.nextLine();
+        String regex = "^(91)? [6-9][0-9]{9}+$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(mobileNumber);
+        boolean valid=matcher.matches();
+        if (valid==true){
+            System.out.println("Your mobile number "+mobileNumber+" is Valid");
+        }
+        else{
+            System.out.println("Your mobile number "+mobileNumber+" is Invalid");
+        }
+    }
 }
