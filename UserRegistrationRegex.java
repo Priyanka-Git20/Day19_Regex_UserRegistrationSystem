@@ -1,0 +1,7 @@
+package com.bridgelabz.regex;
+
+public class UserRegistrationRegex {
+    public static void main(String[] args) {
+        System.out.println("Welcome to the user registration system.");
+    }
+}
