@@ -21,4 +21,19 @@ public class UserOperator {
         }
     }
 
+    public void lastName(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the last name");
+        String lastName = sc.nextLine();
+        String regex = "^[A-Z]{1}[a-z]{2,}$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(lastName);
+        boolean valid=matcher.matches();
+        if (valid==true){
+            System.out.println("Your name "+lastName+" is Valid");
+        }
+        else{
+            System.out.println("Your name "+lastName+" is Invalid");
+        }
+    }
 }
