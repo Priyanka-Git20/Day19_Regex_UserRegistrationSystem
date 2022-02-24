@@ -68,4 +68,20 @@ public class UserOperator {
             System.out.println("Your mobile number "+mobileNumber+" is Invalid");
         }
     }
+
+    public void password(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the password");
+        String password = sc.nextLine();
+        String regex = "^[0-9a-zA-z]{8,}+$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(password);
+        boolean valid=matcher.matches();
+        if (valid==true){
+            System.out.println("Your password "+password+" is Valid");
+        }
+        else{
+            System.out.println("Your password "+password+" is Invalid");
+        }
+    }
 }
