@@ -73,7 +73,8 @@ public class UserOperator {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the password");
         String password = sc.nextLine();
-        String regex = "^[0-9a-zA-z]{8,}+$";
+        // String regex = "^[0-9a-zA-Z]{8,}$";
+        String regex = "^(?=.*[A-Z])(?=.*[a-z]).{8,}$";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(password);
         boolean valid=matcher.matches();
