@@ -30,10 +30,37 @@ public class UserOperator {
         Matcher matcher = pattern.matcher(lastName);
         boolean valid=matcher.matches();
         if (valid==true){
-            System.out.println("Your name "+lastName+" is Valid");
+            System.out.println("Your last name "+lastName+" is Valid");
         }
         else{
-            System.out.println("Your name "+lastName+" is Invalid");
+            System.out.println("Your last name "+lastName+" is Invalid");
         }
     }
+
+    public void emailAddress(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the email address");
+        String emailAddress = sc.nextLine();
+        String regex = "^[a-z0-9]{3,}+([_+-.][a-z0-9]{3,}+)*@[a-z0-9]+.[a-z]{2,3}+(.[a-z]{2,3}){0,1}$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(emailAddress);
+        boolean valid=matcher.matches();
+        if (valid==true){
+            System.out.println("Your email "+emailAddress+" is Valid");
+        }
+        else{
+            System.out.println("Your email "+emailAddress+" is Invalid");
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
 }
