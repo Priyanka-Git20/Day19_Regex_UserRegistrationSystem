@@ -4,10 +4,10 @@ public class UserRegistrationRegex {
     public static void main(String[] args) {
         System.out.println("Welcome to the user registration system.");
         UserOperator userOperator = new UserOperator();
-        /*userOperator.firstName();
+        userOperator.firstName();
         userOperator.lastName();
         userOperator.emailAddress();
-        userOperator.mobileNumber();*/
+        userOperator.mobileNumber();
         userOperator.password();
     }
 }
